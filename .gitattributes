@@ -13,3 +13,4 @@ external/chromium/chromium-ozone-wayland_88.0.4324.150_aarch64.tgz filter=lfs di
 external/chromium/chromium-ozone-wayland_88.0.4324.150_armhf.tgz filter=lfs diff=lfs merge=lfs -text
 external/libmali/lib/arm-linux-gnueabihf/libmali-valhall-g610-g6p0-x11-wayland-gbm.so filter=lfs diff=lfs merge=lfs -text
 external/libmali/lib/aarch64-linux-gnu/libmali-valhall-g610-g6p0-x11-wayland-gbm.so filter=lfs diff=lfs merge=lfs -text
+device/rockchip/common/overlays/overlay-fonts/source-han-sans-cn-2.001R.tar filter=lfs diff=lfs merge=lfs -text
