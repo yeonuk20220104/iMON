@@ -3,3 +3,7 @@ debian/packages/arm64/chromium/chromium-x11_91.0.4472.164_arm64.deb filter=lfs d
 debian/packages/arm64/rknpu2/rknpu2-v1.4.0.tar filter=lfs diff=lfs merge=lfs -text
 *.zip filter=lfs diff=lfs merge=lfs -text
 prebuilts/gcc/linux-x86/aarch64/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/lib64/libstdc++.a filter=lfs diff=lfs merge=lfs -text
+tools/linux/rk_ddrbin_tool_V1.01.7z filter=lfs diff=lfs merge=lfs -text
+tools/linux/PinDebug/pin_debug_tool_v1.11_for_linux.tar filter=lfs diff=lfs merge=lfs -text
+tools/windows/rk_ddrbin_tool_V1.01.7z filter=lfs diff=lfs merge=lfs -text
+tools/windows/Rockchip_USB_SQ_Tool/Rockchip_USB_SQ_Tool_V1.5.exe filter=lfs diff=lfs merge=lfs -text
