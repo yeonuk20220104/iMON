@@ -539,7 +539,7 @@ ehci_submit_async(struct usb_device *dev, unsigned long pipe, void *buffer,
 
 	ctrl->qh_list.qh_link = cpu_to_hc32(virt_to_phys(qh) | QH_LINK_TYPE_QH);
 
-	/* Flush dcache */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
+	/* Flush dcache */
 	flush_dcache_range((unsigned long)&ctrl->qh_list,
 		ALIGN_END_ADDR(struct QH, &ctrl->qh_list, 1));
 	flush_dcache_range((unsigned long)qh, ALIGN_END_ADDR(struct QH, qh, 1));
