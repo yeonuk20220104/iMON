@@ -539,7 +539,7 @@ ehci_submit_async(struct usb_device *dev, unsigned long pipe, void *buffer,
 
 	ctrl->qh_list.qh_link = cpu_to_hc32(virt_to_phys(qh) | QH_LINK_TYPE_QH);
 
-	/* Flush dcache */
+	/* Flush dcache */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
 	flush_dcache_range((unsigned long)&ctrl->qh_list,
 		ALIGN_END_ADDR(struct QH, &ctrl->qh_list, 1));
 	flush_dcache_range((unsigned long)qh, ALIGN_END_ADDR(struct QH, qh, 1));
@@ -1683,7 +1683,7 @@ int ehci_setup_phy(struct udevice *dev, struct phy *phy, int index)
 
 	ret = generic_phy_get_by_index(dev, index, phy);
 	if (ret) {
-		if (ret != -ENOENT) {
+		if (ret != -ENOENT && ret != -ENODEV) {
 			dev_err(dev, "failed to get usb phy\n");
 			return ret;
 		}

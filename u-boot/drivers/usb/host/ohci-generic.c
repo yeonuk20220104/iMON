@@ -33,7 +33,7 @@ static int ohci_setup_phy(struct udevice *dev, int index)
 
 	ret = generic_phy_get_by_index(dev, index, &priv->phy);
 	if (ret) {
-		if (ret != -ENOENT) {
+		if (ret != -ENOENT && ret != -ENODEV) {
 			dev_err(dev, "failed to get usb phy\n");
 			return ret;
 		}
