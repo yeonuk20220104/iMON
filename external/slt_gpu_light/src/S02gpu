@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# start gldemo
+#
+
+export XDG_RUNTIME_DIR=/var/run
+
+if [ -f "/usr/sbin/slt_gpu_light" ]
+then
+	GLDEMO="/usr/sbin/slt_gpu_light"
+fi
+
+case "$1" in
+  start)
+    $GLDEMO &
+    ;;
+  stop)
+    ;;
+  restart|reload)
+    $0 stop
+    $0 start
+    ;;
+  *)
+    echo "Usage: $0 {start|stop|restart}"
+    ;;
+esac
+
+exit 0

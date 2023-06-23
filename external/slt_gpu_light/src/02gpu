@@ -1,0 +1,16 @@
+#!/bin/sh
+# Log some extra information at the beginning of a suspend/resume cycle.
+# TODO: Make this hook only run when PM_DEBUG is true?
+export XDG_RUNTIME_DIR=/var/run
+
+. "${PM_FUNCTIONS}"
+
+case "$1" in
+       hibernate|suspend)
+               ;;
+       thaw|resume)
+	       slt_gpu_light
+               ;;
+       *) exit $NA
+               ;;
+esac
