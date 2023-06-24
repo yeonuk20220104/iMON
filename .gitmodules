@@ -1,0 +1,3 @@
+[submodule "App"]
+	path = App
+	url = https://github.com/deois/ddc_hrts_app_common.git
