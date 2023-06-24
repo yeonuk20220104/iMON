@@ -580,7 +580,7 @@ static int do_usb_stop_keyboard(int force)
 	return 0;
 }
 
-static void do_usb_start(void)
+void do_usb_start(void)
 {
 	bootstage_mark_name(BOOTSTAGE_ID_USB_START, "usb_start");
 

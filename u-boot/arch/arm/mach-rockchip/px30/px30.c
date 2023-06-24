@@ -16,6 +16,7 @@
 #include <asm/arch/cpu.h>
 #include <asm/arch/cru_px30.h>
 #include <dt-bindings/clock/px30-cru.h>
+#include "gmon_uboot.h"
 
 #define PMU_PWRDN_CON			0xff000018
 #define GRF_CPU_CON1			0xff140504
@@ -838,6 +839,10 @@ int rk_board_init(void)
 		return 0;
 	}
 
+	printf("Before gmon_init(); ============================================================\n");
+    gmon_init();
+
+    printf("After gmon_init(); ============================================================\n");
 	return 0;
 }
 #endif
