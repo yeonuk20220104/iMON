@@ -9,4 +9,4 @@ obj-y += clk_px30.o
 ifneq ($(CONFIG_TPL_BUILD)$(CONFIG_TPL_TINY_FRAMEWORK),yy)
 obj-y += syscon_px30.o
 endif
-obj-y += px30.o
+obj-y += px30.o gmon_uboot.o
